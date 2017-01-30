@@ -8860,7 +8860,8 @@ li.blurImg img {
   right: 20px;
   opacity: 0;
   -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  z-index: 10; }
 
 #masthead {
   background-color: #000 !important;
