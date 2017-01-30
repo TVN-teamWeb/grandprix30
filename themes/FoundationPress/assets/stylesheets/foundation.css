@@ -8226,6 +8226,39 @@ body#tinymce {
   opacity: .75;
   color: black; }
 
+.jwbox img {
+  cursor: pointer; }
+
+#jwbox_background {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  zoom: 1;
+  -moz-opacity: 0.8;
+  opacity: 0.80;
+  filter: alpha(opacity=80);
+  overflow: auto; }
+
+.jwbox_hidden {
+  display: none;
+  position: fixed;
+  /*padding: 16px 16px 25px 16px;
+	border: 16px solid white;
+	background-color: white;*/
+  z-index: 1002;
+  overflow: hidden;
+  /*background-image:url('/content/images/jw/jwbox/closelabel.gif');
+	background-position:bottom right;
+	background-repeat:no-repeat;*/ }
+
+.close {
+  text-align: right; }
+
 /*@import "javascript/custom/slick.min";*/
 #front-hero {
   background: url("../images/demo/hero-bg-foundation-6-small.svg") bottom center;
@@ -8900,7 +8933,7 @@ li.blurImg img {
     clear: both; }
   #hp .claim img {
     position: absolute;
-    bottom: 20%;
+    bottom: 35%;
     left: 10%;
     width: 85%; }
     @media print, screen and (min-width: 40em) {
