@@ -41,7 +41,9 @@
 			<div class="title-bar" data-responsive-toggle="site-navigation">
 				<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
 				<div class="title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/logo.png" />
+				</a>
 				</div>
 
 			</div>
