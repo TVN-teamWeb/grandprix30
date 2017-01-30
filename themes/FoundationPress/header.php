@@ -16,7 +16,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php wp_head(); ?>
-
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ; ?>/css/jwbox.css" />
 	</head>
 	<body <?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
@@ -83,7 +83,9 @@
 
 
 
-		<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/gp30.js></script>
+				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/gp30.js></script>
 				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/slick.js></script>
 			  <script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/custom/slick.min.js></script>
+				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/jwplayer/jwplayer.js></script>
+				<script src=<?php echo get_bloginfo('template_url'); ?>/assets/javascript/jquery.jwbox.js></script>
 	<section class="container">

@@ -135,7 +135,7 @@ function custom_post() {
         ); /* fine della registrazione */
 
         /*Post type: WINNER*/
-          register_post_type( 'winner', /* nome del custom post type */
+        register_post_type( 'winners', /* nome del custom post type */
           // aggiungiamo ora tutte le impostazioni necessarie, in primis definiamo le varie etichette mostrate nei menù
             array('labels' => array(
                 'name' => 'Winners', /* Nome, al plurale, dell'etichetta del post type. */
@@ -150,7 +150,7 @@ function custom_post() {
                 'menu_icon' => get_stylesheet_directory_uri() . '/images/gp30/icons/winner.png', /* Scegli l'icona da usare nel menù per il posty type */
                 'public' => true, /* Definisce se il post type sia visibile sia da front-end che da back-end */
                 /* la riga successiva definisce quali elementi verranno visualizzati nella schermata di creazione del post */
-                'supports' => array( 'title', 'excerpt', 'revisions','sticky'),
+                'supports' => array( 'title', 'excerpt', 'thumbnail','revisions','sticky'),
                 'taxonomies' => array('category')
             ) /* fine delle opzioni */
           ); /* fine della registrazione */

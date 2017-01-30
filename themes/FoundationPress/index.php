@@ -200,169 +200,122 @@ get_header(); ?>
         wp_reset_postdata();
 
   ?>
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
+</div>
 </section>
 
 
 <section id=gp>
   <h3>grand prix 2016</h3>
       <div class="winner">
+        <div class="jwbox">
          <img data-interchange="[<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-small.jpg, small], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-medium.jpg, medium], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-large.jpg, large], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-xl.jpg, xlarge]">
+         <div class="jwbox_hidden">
+           <div class="close"> <img src="<?php bloginfo('template_url'); ?>/images/gp30/close-button.png"> </div>
+           <div  class="jwbox_content">
+             <div id="vincitori"></div>
+           </div>
+         </div>
+       </div>
       </div>
+
+      <script type="text/javascript">
+      $(document).ready(function () {
+
+        jwplayer('vincitori').setup({
+          flashplayer: '<?php bloginfo('template_url'); ?>/assets/javascript/jwplayer/player.swf',
+          width: '640',
+          height: '360',
+          file: 'http://wpc.6F93.edgecastcdn.net/806F93/media.televisionet.tv/video/grandprix/advertisingstrategies/24_05_16-business-Winner_List_GP_2016_Ecadem-IT.mp4',
+          autostart: true,
+          bufferlength:'5',
+          provider:'http',
+          skin:"<?php bloginfo('template_url'); ?>/assets/javascript/jwplayer/televisionet.zip",
+          plugins: "timeslidertooltipplugin-1"
+        });
+        });
+      </script>
+
+
 </section>
 
 
 <section id="winner-list">
   <h3>winner list</h3>
 <div id="video">
-  <!-- Thumb Video -->
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
 
-  <div class="thumb-video">
-    <div class="caption">
-          <h3>One smile is enough to change our world</h3>
-          <ul>
-            <li>Client:<span>pippo<span></li>
-            <li>Agency: <span>pippo<span></li>
-            <li>Cdp:<span>pippo<span></li>
-          </ul>
-      </div>
-      <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
-  </div>
+  <?php $args = array(
+        'post_type' => 'winners',
+        'category_name' => 'edizione-2016',
+        'posts_per_page' => 12
+      );
+
+      $winner = new WP_Query( $args );
+
+      $i=0;
+
+      if ( $winner->have_posts() ) :
+        while ( $winner->have_posts() ) : $winner->the_post();
+
+        $i++;
+        $spot = get_field('titolo');
+        $video = get_field('nome_video');
+        $cliente = get_field('azienda');
+        $agenzia = get_field('agenzia');
+        $cdp = get_field('cdp');
+
+        ?>
+
+        <div class="thumb-video">
+          <div class="jwbox">
+            <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
+            <div class="jwbox_hidden">
+              <div  class="jwbox_content">
+                <div id="winner-<?php echo $i; ?>"></div>
+              </div>
+            </div>
+            <div class="caption">
+                  <h3><?php echo $spot; ?></h3>
+                  <ul>
+                    <li>Client: <span><?php echo $cliente; ?><span></li>
+                    <li>Agency: <span><?php echo $agenzia; ?><span></li>
+                    <li>Cdp: <span><?php echo $cdp; ?><span></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function () {
+
+          jwplayer('winner-<?php echo $i; ?>').setup({
+            flashplayer: '<?php bloginfo('template_url'); ?>/assets/javascript/jwplayer/player.swf',
+            width: '640',
+            height: '360',
+            file: 'http://wpc.6F93.edgecastcdn.net/806F93/media.televisionet.tv/video/grandprix/advertisingstrategies/<?php echo $video; ?>',
+            autostart: true,
+            bufferlength:'5',
+            provider:'http',
+            skin:"<?php bloginfo('template_url'); ?>/assets/javascript/jwplayer/televisionet.zip",
+            plugins: "timeslidertooltipplugin-1"
+          });
+          });
+        </script>
+
+<?php
+endwhile;
+endif;
+// Reset Post Data
+wp_reset_postdata();
+
+
+?>
 </div>
 </section>
+
+
+
+
+
+
 
 <section id="interviste">
   <div class="testo">
