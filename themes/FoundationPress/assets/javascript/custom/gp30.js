@@ -1,10 +1,10 @@
 /* MENU */
 
-$("#menu-main .menu-item").hover(function() {
+$("#menu-main-1 .menu-item").hover(function() {
 
-  $("#menu-main > .menu-item > a").addClass('sfocato');
+  $("#menu-main-1 > .menu-item > a").addClass('sfocato');
   $(this).find("a").removeClass('sfocato');
-  $("menu-main").css("z-index", "50");
+  $("menu-main-1").css("z-index", "50");
 
   /* visualizzazione submenu */
   $(".is-active > .is-dropdown-submenu").css("opacity", 1);
