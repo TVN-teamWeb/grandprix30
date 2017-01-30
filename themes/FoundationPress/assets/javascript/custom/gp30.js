@@ -11,13 +11,13 @@ $("#menu-main .menu-item").hover(function() {
   //$(this).removeClass('sfocato');
 });
 
-$("#menu-main > .menu-item").mouseout(function() {
-  $("#menu-main > .menu-item > a").removeClass('sfocato');
+$("#menu-main-1 > .menu-item").mouseout(function() {
+  $("#menu-main-1 > .menu-item > a").removeClass('sfocato');
   //$(".submenu").css("top", "5px");
 });
 
-$("#menu-main").find(".menu-item").click(function() {
-  $("#menu-main").find(".active").removeClass('active');
+$("#menu-main-1").find(".menu-item").click(function() {
+  $("#menu-main-1").find(".active").removeClass('active');
   $(this).addClass("active");
   var sect_id = $(this).find("a").eq(0).attr("href");
   if(sect_id != "#") {
@@ -42,14 +42,14 @@ $(window).scroll(function() {
   }
 
   /* fade in sezioni */
-  var ST = new Number($("#backtotop").offset().top);
+  var ST = $("#backtotop").offset().top;
   var idx = 0;
   $(".container section").each( function() {
     var sect_ST = parseInt($(".container section").eq(idx).offset().top);
     var IDS = $(this).attr("id");
     if(IDS != "slider") {
       if(ST>sect_ST) {
-        console.log("fade in "+$(this).attr("id"));
+        //console.log("fade in "+$(this).attr("id"));
         //console.log("Page "+ST+" section "+sect_ST);
         $(this).css("opacity",1);
       }
