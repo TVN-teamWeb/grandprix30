@@ -262,12 +262,15 @@ get_header(); ?>
         $cliente = get_field('azienda');
         $agenzia = get_field('agenzia');
         $cdp = get_field('cdp');
+        $thumb = get_field('thumb_video');
+
+        if( !empty($thumb) ):
 
         ?>
 
         <div class="thumb-video">
           <div class="jwbox">
-            <img class="thumbnail size" src="<?php echo get_bloginfo('template_url'); ?>/images/gp30/thumb-video.jpg">
+            <img class="thumbnail size" src="<?php echo $thumb['url']; ?>">
             <div class="jwbox_hidden">
               <div  class="jwbox_content">
                 <div id="winner-<?php echo $i; ?>"></div>
@@ -301,6 +304,7 @@ get_header(); ?>
         </script>
 
 <?php
+  endif;
 endwhile;
 endif;
 // Reset Post Data
