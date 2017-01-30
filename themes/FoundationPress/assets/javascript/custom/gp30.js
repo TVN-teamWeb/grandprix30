@@ -77,12 +77,12 @@ $(window).scroll(function() {
 
   $(document).ready( function() {
 
-    $(".claim img").animate({
+    $(".claim a img").animate({
       opacity: 1
     },200);
-    var $animation = $(".claim img").data("animation");
+    var $animation = $(".claim a img").data("animation");
 
-    MotionUI.animateIn($(".claim img"), "slide-in-right");
+    MotionUI.animateIn($(".claim a img"), "slide-in-right");
 
     $(".submenu").removeClass("vertical");
     //$(".submenu").css("top", "5px");
