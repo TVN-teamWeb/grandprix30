@@ -39,6 +39,7 @@ li.blurImg img {
   bottom: 20px; right: 20px;
   opacity: 0;
   transition: all 0.5s linear;
+  z-index: 10;
 }
 #masthead { background-color: #000 !important; /*height: 105px !important;*/ }
 
@@ -90,7 +91,7 @@ background-color: #000000 !important;
 
       img{
         position: absolute;
-        bottom: 20%;
+        bottom: 35%;
         @include breakpoint(small) {
           left: 10%;
           width: 85%;
@@ -132,13 +133,13 @@ background-color: #000000 !important;
 
      p.work{
       @include breakpoint(small) {
-       font-weight:inherit; font-size: 0.6em; font-style: italic;
+       font-weight:inherit; font-size: 0.7em; font-style: italic;
      }
      @include breakpoint(medium) {
-      font-weight:inherit; font-size: 0.75em; font-style: italic;
+      font-weight:inherit; font-size: 0.8em; font-style: italic;
     }
     @include breakpoint(large) {
-     font-weight:inherit; font-size: 0.8em; font-style: italic;
+     font-weight:inherit; font-size: 0.85em; font-style: italic;
    }
 }
 
@@ -161,13 +162,16 @@ background-color: #000000 !important;
                          .griglia-giuria {
                            padding: 0 !important;
                             img {width: 100%; }
-                             @include grid-column(4);
+                             @include grid-column(6);
                            }
               }
 
               @include breakpoint(medium) {
-
-                         @include grid-row();
+                .griglia-giuria {
+                  padding: 0 !important;
+                   img {width: 100%; }
+                    @include grid-column(4);
+                  }
 
                             }
               @include breakpoint(large) {
@@ -192,13 +196,57 @@ background-color: #000000 !important;
 
 
 #gp{
-  #winner{
+  .winner{
+    position: relative;
   @include grid-row();
 
      width: 100%;
      margin-left: auto;
      margin-right: auto;
      max-width: initial;
+   }
+   .player{
+  //  @include grid-row();
+     position: absolute;
+     width: 100%;
+     max-width: 2560px;
+     color: #ffffff;
+
+     h3{text-decoration: none !important; font-weight: 900; text-transform: capitalize;}
+     h3.spot-winner{text-decoration: underline !important; font-weight: 900; }
+       @include breakpoint(small) {
+         bottom: 10%;
+         p.desc{font-size: 0.9em !important;}
+       }
+
+       @include breakpoint(medium) {
+         bottom: 20%;
+         h3{font-size: 1.8em !important;}
+         p.desc{font-size: 1em !important;}
+         h3.spot-winner{font-size: 1.5em !important; }
+       }
+
+       @include breakpoint(large) {
+         h3{font-size: 1.4em !important;}
+         p.desc{font-size: 1.2em !important;}
+         h3.spot-winner{font-size: 1.7em !important;}
+         bottom: 20%;
+       }
+
+       @include breakpoint(xlarge) {
+         h3{font-size: 1.5em !important;}
+         p.desc{font-size: 0.9em !important;}
+         h3.spot-winner{font-size: 1.2em !important;}
+          bottom: 10%;
+          .logo-player{width: 3%;}
+       }
+
+       @include breakpoint(xxlarge) {
+         h3{font-size: 2.1em !important;}
+         bottom: 15%;
+         h3.spot-winner{font-size: 1.8em !important;}
+       }
+
    }
 }
 
@@ -208,6 +256,7 @@ background-color: #000000 !important;
   #video{
     .thumb-video{
       position: relative;
+      cursor: pointer;
           .caption {
           	display: none;
           	position: absolute;

@@ -7979,11 +7979,19 @@ body#tinymce {
   outline: none; }
 
 .slider {
-  margin-top: 0;
+  background-color: #f3f3f3;
   margin-left: auto;
   margin-right: auto;
-  min-height: 200px;
-  background-color: #f3f3f3; }
+  min-height: 200px !important;
+  margin-top: 50px; }
+  @media print, screen and (min-width: 40em) {
+    .slider {
+      min-height: 200px;
+      margin-top: 40px; } }
+  @media print, screen and (min-width: 64em) {
+    .slider {
+      min-height: 200px;
+      margin-top: 0 !important; } }
 
 .slick-slide {
   margin: 0px 20px; }
@@ -8225,6 +8233,39 @@ body#tinymce {
 .slick-dots li.slick-active button:before {
   opacity: .75;
   color: black; }
+
+.jwbox img {
+  cursor: pointer; }
+
+#jwbox_background {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  zoom: 1;
+  -moz-opacity: 0.8;
+  opacity: 0.80;
+  filter: alpha(opacity=80);
+  overflow: auto; }
+
+.jwbox_hidden {
+  display: none;
+  position: fixed;
+  /*padding: 16px 16px 25px 16px;
+	border: 16px solid white;
+	background-color: white;*/
+  z-index: 1002;
+  overflow: hidden;
+  /*background-image:url('/content/images/jw/jwbox/closelabel.gif');
+	background-position:bottom right;
+	background-repeat:no-repeat;*/ }
+
+.close {
+  text-align: right; }
 
 /*@import "javascript/custom/slick.min";*/
 #front-hero {
@@ -8831,7 +8872,8 @@ li.blurImg img {
   right: 20px;
   opacity: 0;
   -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear; }
+  transition: all 0.5s linear;
+  z-index: 10; }
 
 #masthead {
   background-color: #000 !important;
@@ -8900,7 +8942,7 @@ li.blurImg img {
     clear: both; }
   #hp .claim img {
     position: absolute;
-    bottom: 20%;
+    bottom: 35%;
     left: 10%;
     width: 85%; }
     @media print, screen and (min-width: 40em) {
@@ -8944,17 +8986,17 @@ li.blurImg img {
           text-transform: uppercase; } }
     #giuria #lista-giuria p.work {
       font-weight: inherit;
-      font-size: 0.6em;
+      font-size: 0.7em;
       font-style: italic; }
       @media print, screen and (min-width: 40em) {
         #giuria #lista-giuria p.work {
           font-weight: inherit;
-          font-size: 0.75em;
+          font-size: 0.8em;
           font-style: italic; } }
       @media print, screen and (min-width: 64em) {
         #giuria #lista-giuria p.work {
           font-weight: inherit;
-          font-size: 0.8em;
+          font-size: 0.85em;
           font-style: italic; } }
     #giuria #lista-giuria .zoom img {
       -webkit-backface-visibility: hidden;
@@ -8978,7 +9020,7 @@ li.blurImg img {
       clear: both; }
     #giuria #lista-giuria .griglia-giuria {
       padding: 0 !important;
-      width: 33.33333%;
+      width: 50%;
       float: left;
       padding-right: 0.625rem;
       padding-left: 0.625rem; }
@@ -8991,15 +9033,21 @@ li.blurImg img {
       #giuria #lista-giuria .griglia-giuria:last-child:not(:first-child) {
         float: right; }
     @media print, screen and (min-width: 40em) {
-      #giuria #lista-giuria {
-        max-width: 75rem;
-        margin-right: auto;
-        margin-left: auto; }
-        #giuria #lista-giuria::before, #giuria #lista-giuria::after {
-          display: table;
-          content: ' '; }
-        #giuria #lista-giuria::after {
-          clear: both; } }
+      #giuria #lista-giuria .griglia-giuria {
+        padding: 0 !important;
+        width: 33.33333%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem; }
+        #giuria #lista-giuria .griglia-giuria img {
+          width: 100%; } }
+  @media print, screen and (min-width: 40em) and (min-width: 40em) {
+    #giuria #lista-giuria .griglia-giuria {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+    @media print, screen and (min-width: 40em) {
+        #giuria #lista-giuria .griglia-giuria:last-child:not(:first-child) {
+          float: right; } }
     @media print, screen and (min-width: 64em) {
       #giuria #lista-giuria {
         max-width: 75rem;
@@ -9038,7 +9086,8 @@ li.blurImg img {
   #gallery .columns {
     padding: 0; }
 
-#gp #winner {
+#gp .winner {
+  position: relative;
   max-width: 75rem;
   margin-right: auto;
   margin-left: auto;
@@ -9046,11 +9095,63 @@ li.blurImg img {
   margin-left: auto;
   margin-right: auto;
   max-width: initial; }
-  #gp #winner::before, #gp #winner::after {
+  #gp .winner::before, #gp .winner::after {
     display: table;
     content: ' '; }
-  #gp #winner::after {
+  #gp .winner::after {
     clear: both; }
+
+#gp .player {
+  position: absolute;
+  width: 100%;
+  max-width: 2560px;
+  color: #ffffff;
+  bottom: 10%; }
+  #gp .player h3 {
+    text-decoration: none !important;
+    font-weight: 900;
+    text-transform: capitalize; }
+  #gp .player h3.spot-winner {
+    text-decoration: underline !important;
+    font-weight: 900; }
+  #gp .player p.desc {
+    font-size: 0.9em !important; }
+  @media print, screen and (min-width: 40em) {
+    #gp .player {
+      bottom: 20%; }
+      #gp .player h3 {
+        font-size: 1.8em !important; }
+      #gp .player p.desc {
+        font-size: 1em !important; }
+      #gp .player h3.spot-winner {
+        font-size: 1.5em !important; } }
+  @media print, screen and (min-width: 64em) {
+    #gp .player {
+      bottom: 20%; }
+      #gp .player h3 {
+        font-size: 1.4em !important; }
+      #gp .player p.desc {
+        font-size: 1.2em !important; }
+      #gp .player h3.spot-winner {
+        font-size: 1.7em !important; } }
+  @media screen and (min-width: 75em) {
+    #gp .player {
+      bottom: 10%; }
+      #gp .player h3 {
+        font-size: 1.5em !important; }
+      #gp .player p.desc {
+        font-size: 0.9em !important; }
+      #gp .player h3.spot-winner {
+        font-size: 1.2em !important; }
+      #gp .player .logo-player {
+        width: 3%; } }
+  @media screen and (min-width: 90em) {
+    #gp .player {
+      bottom: 15%; }
+      #gp .player h3 {
+        font-size: 2.1em !important; }
+      #gp .player h3.spot-winner {
+        font-size: 1.8em !important; } }
 
 #winner-list {
   max-width: 100% !important;
@@ -9066,7 +9167,8 @@ li.blurImg img {
     margin-right: auto;
     max-width: initial; }
     #winner-list #video .thumb-video {
-      position: relative; }
+      position: relative;
+      cursor: pointer; }
       #winner-list #video .thumb-video .caption {
         display: none;
         position: absolute;

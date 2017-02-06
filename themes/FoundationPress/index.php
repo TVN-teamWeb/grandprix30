@@ -171,8 +171,6 @@ get_header(); ?>
 
       $giuria = new WP_Query( $args );
 
-//print_r($giuria);
-
 
       if ( $giuria->have_posts() ) :
         while ( $giuria->have_posts() ) : $giuria->the_post();
@@ -209,6 +207,51 @@ get_header(); ?>
       <div class="winner">
         <div class="jwbox">
          <img data-interchange="[<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-small.jpg, small], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-medium.jpg, medium], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-large.jpg, large], [<?php echo get_bloginfo('template_url'); ?>/images/gp30/winner-xl.jpg, xlarge]">
+<?php
+
+$args = array(
+    'post_type' => 'winners',
+    'posts_per_page' => 1,
+    'meta_query' => array(
+  		array(
+  			'key' => 'vincitore',
+  			'compare' => '==',
+  			'value' => '1'
+  		)
+  	)
+  );
+
+  $vincitore = new WP_Query( $args );
+
+
+  if ( $vincitore->have_posts() ) :
+    while ( $vincitore->have_posts() ) : $vincitore->the_post();
+
+      $premio = get_field( "premio" );
+      $campagna = get_field( "titolo" );
+      $azienda = get_field("azienda");
+      $agenzia = get_field("agenzia");
+      $cdp = get_field("cdp");
+?>
+
+
+         <div class="player">
+           <h3 class="hide-for-small-only">Winners</h3>
+           <p class="desc"><b>1st Prize: </b><?php echo $premio; ?></p>
+           <img class="logo-player" src="<?php bloginfo('template_url'); ?>/images/gp30/icon-player.png">
+           <h3 class="spot-winner"><?php echo $campagna; ?></h3>
+           <p class="desc">Client: <b><?php echo $azienda; ?></b> / Agency: <b><?php echo $agenzia; ?></b> / Cdp: <b><?php echo $cdp; ?></b></p>
+         </div>
+
+         <?php
+         endwhile;
+         endif;
+         // Reset Post Data
+         wp_reset_postdata();
+
+
+         ?>
+
          <div class="jwbox_hidden">
            <div class="close"> <img src="<?php bloginfo('template_url'); ?>/images/gp30/close-button.png"> </div>
            <div  class="jwbox_content">
