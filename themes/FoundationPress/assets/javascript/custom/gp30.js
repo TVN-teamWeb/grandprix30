@@ -1,30 +1,29 @@
 /* MENU */
 
-$("#menu-main .menu-item").hover(function() {
-
-  $("#menu-main > .menu-item > a").addClass('sfocato');
+$("#menu-main-1 > .menu-item").hover(function() {
+  $("#menu-main-1 > .menu-item > a").addClass('sfocato');
   $(this).find("a").removeClass('sfocato');
-  $("menu-main").css("z-index", "50");
+  //$("menu-main-1").css("z-index", "50");
+  //console.log("OVER "+$(this).find("a").html());
 
   /* visualizzazione submenu */
-  $(".is-active > .is-dropdown-submenu").css("opacity", 1);
+  $(this).find(".is-dropdown-submenu").css("opacity", 1);
   //$(this).removeClass('sfocato');
 });
 
-$("#menu-main > .menu-item").mouseout(function() {
-  $("#menu-main > .menu-item > a").removeClass('sfocato');
+$("#menu-main-1 > .menu-item").mouseout(function() {
+  $("#menu-main-1 > .menu-item > a").removeClass('sfocato');
   //$(".submenu").css("top", "5px");
 });
 
-$("#menu-main").find(".menu-item").click(function() {
-  $("#menu-main").find(".active").removeClass('active');
+/*$("#menu-main-1").find(".menu-item").click(function() {
+  $("#menu-main-1").find(".active").removeClass('active');
   $(this).addClass("active");
   var sect_id = $(this).find("a").eq(0).attr("href");
   if(sect_id != "#") {
-    console.log(sect_id);
     goto_section($(sect_id));
   }
-});
+});*/
 
 
 
@@ -42,14 +41,14 @@ $(window).scroll(function() {
   }
 
   /* fade in sezioni */
-  var ST = new Number($("#backtotop").offset().top);
+  var ST = $("#backtotop").offset().top;
   var idx = 0;
   $(".container section").each( function() {
     var sect_ST = parseInt($(".container section").eq(idx).offset().top);
     var IDS = $(this).attr("id");
     if(IDS != "slider") {
       if(ST>sect_ST) {
-        console.log("fade in "+$(this).attr("id"));
+        //console.log("fade in "+$(this).attr("id"));
         //console.log("Page "+ST+" section "+sect_ST);
         $(this).css("opacity",1);
       }
